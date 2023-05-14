@@ -63,11 +63,7 @@ jobs:
          IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
- 
-      - name: checking file
-        run: cat depservice.yml
-        
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG       
         
          # EKS Cluster Authentication
       - name: EKS Cluster Authentication
